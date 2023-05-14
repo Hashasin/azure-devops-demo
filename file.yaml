@@ -286,7 +286,7 @@ stages:
           - task: AzureCLI@2
             displayName: "Deploy Helm Chart"
             inputs:
-              azureSubscription: "aks-spn-ca"
+              connectedServiceName: "aks-spn-ca"
               scriptType: "bash"
               scriptLocation: "inlineScript"
               workingDirectory: "$(System.ArtifactsDirectory)/drop/helm_chart"
